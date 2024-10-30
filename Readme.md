@@ -1,10 +1,10 @@
 ## Replication of statistics from data from paper Subjective likelihood and the construal level of future events: A replication study of Wakslak, Trope, Liberman, and Alony (2006)
 
-Authors of this paper kindly published their [data in OSF](https://osf.io/5x8dp/?view_only=). They didn't publish their code. Here I wrote script in R that calculates statistics for experiment 1 and 2 in their [paper](https://osf.io/preprints/psyarxiv/gd6ej).
+Authors of this paper kindly published their [data in OSF](https://osf.io/5x8dp/?view_only=). They didn't publish their code. Here I wrote a script from scratch in R that calculates statistics for experiment 1 and 2 in their [paper](https://osf.io/preprints/psyarxiv/gd6ej).
 
 ## Main result: Statistics seems to be reproducible. 
 
-By which I mean that I am getting same statistics and I can reproduce Figure 3 (figures/exp2_crossing_plot.png).
+By which I mean that I am getting same statistics and I can reproduce Figure 3 (see figures/exp2_crossing_plot.png).
 
 Small discrepancies:
 
@@ -14,16 +14,17 @@ Small discrepancies:
 
 It is weird because both of these numbers are from simple formulas, and are therefore numerically stable. Because the difference is tiny, it doesn't matter.
 
-## Visualisations for experiment 1:
+## Visualisation for experiment 1:
 
-![](https://github.com/nadvornix/Calderon2020_statistical_replication/blob/main/figures/exp1histogram_DV_logtransformed_by_condition.png?raw=true){width="478"}
+![](https://github.com/nadvornix/Calderon2020_statistical_replication/blob/main/figures/exp1histogram_DV_logtransformed_by_condition.png?raw=true)
 
-## Experiment 
+## Visualisation for experiment 2
 
-## ![](https://github.com/nadvornix/Calderon2020_statistical_replication/blob/main/figures/exp2_scatter_of_z-scores_with_marginals.png?raw=true){width="493"}
+## ![](https://github.com/nadvornix/Calderon2020_statistical_replication/blob/main/figures/exp2_scatter_of_z-scores_with_marginals.png?raw=true)
 
 Reproduction of Figure 3:
 
-![](https://github.com/nadvornix/Calderon2020_statistical_replication/blob/main/figures/exp2_crossing_plot.png?raw=true){width="449"}
+![](https://github.com/nadvornix/Calderon2020_statistical_replication/blob/main/figures/exp2_crossing_plot.png?raw=true)
 
 ## license: CC-BY
+

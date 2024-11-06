@@ -5,6 +5,8 @@ library(tidyr)
 library(ggExtra)
 library(afex)
 library(effectsize)
+library(BayesFactor)
+
 
 data <- read_sav("origdata/Experiment 2.sav")
 
@@ -81,6 +83,19 @@ print(anova_result)
 eta_squared_result <- eta_squared(anova_result, ci =0.90, alternative = "two.sided")
 print(eta_squared_result, digits=3)
 #TODO: original paper is reporting 90% CI as [.001, .015] and I am getting [0.000, 0.020]
+
+# Bayes Factor:
+data_long$Condition <- as.factor(data_long$Condition)
+data_long$Test <- as.factor(data_long$Test)
+data_long$ID <- as.factor(data_long$ID)
+bf_anova <- anovaBF(
+  Score ~ Condition * Test + ID, 
+  data = data_long, 
+  whichRandom = "ID" # Random effect for ID (participant identifier)
+)
+
+# Print the Bayes Factor results
+print(bf_anova)
 
 
 # visualisation from paper -----------------------------------------------------------

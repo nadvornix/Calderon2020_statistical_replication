@@ -7,6 +7,8 @@ library(afex)
 library(effectsize)
 library(tidyverse)
 library(moments)
+library(BayesFactor)
+
 
 data <- read_sav("origdata/Experiment 1.sav")
 
@@ -63,3 +65,17 @@ print(t_test_result)
 data$Likelihood_condition_reverse <- factor(data$Likelihood_condition, levels = c(2, 1))
 d_result <- cohens_d(DV_logtransformed ~ Likelihood_condition_reverse, data = data, pooled = FALSE)
 print(d_result, digits=3)
+
+
+# Bayes factor ------------------------------------------------------------
+
+bf_result <- ttestBF(
+  formula = DV_logtransformed ~ Likelihood_condition,
+  data = data,
+  nullInterval = c(-Inf, 0), # one sided test
+  rscale = 0.707 # Customary cauchy prior
+  )
+
+print(1/bf_result)
+
+

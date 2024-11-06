@@ -2,9 +2,11 @@
 
 Authors of this paper kindly published their [data in OSF](https://osf.io/5x8dp/?view_only=). They didn't publish their code. Here I wrote a script from scratch in R that calculates statistics for experiment 1 and 2 in their [paper](https://osf.io/preprints/psyarxiv/gd6ej).
 
-## Main result: Statistics seems to be reproducible. 
+## Main result: I do not know how to calculate Bayes Factor for experiment 2. Other statistics for experiment 1 and 2 seems to be ok. 
 
-By which I mean that I am getting same statistics and I can reproduce Figure 3 (see figures/exp2_crossing_plot.png).
+I can reproduce Bayes Factor from experiment 1. But cannot figure how to do it in experiment 2. 
+
+I can also reproduce Figure 3 (see figures/exp2_crossing_plot.png).
 
 Small discrepancies:
 
